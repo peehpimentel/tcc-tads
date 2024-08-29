@@ -2255,10 +2255,10 @@ input, select, textarea {
 				background-position: center center;
 			}
 
-			/* #main > section.one {
+			#main > section.one {
 				background-color: #81918E;
-				background-image: url("../../images/banners.jpg");
-			} */
+				/* background: url("../../images/banners.jpg"); */
+			}
 
 			#main > section.two {
 				background-color: #f5fafa;
