@@ -18,3 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added a changelog file.
 - Added a gitignore file.
 
+### Changed
+
+- Modified gitignore, adding a new files to it.
+
