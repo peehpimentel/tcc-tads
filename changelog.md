@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Added a JS function so users can create markers by clicking their mouse.
+- Added a JS function so users can customize the text, image and title of the marker.
+- Added a JS function in order to close the message that appears before showing the map.
 ## [0.0.1] 2024 - 08 - 29
 
 ### Added 
@@ -22,3 +23,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Modified gitignore, adding a new files to it.
 
+## [0.0.2] 2024 - 08 - 30
+
+- Added a JS function in which users can create and delete markers by clicking their mouse.
+
+### Changed
+
+- Updated changelog.
