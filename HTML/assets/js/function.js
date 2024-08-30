@@ -1,4 +1,5 @@
-function myFunction() {
+// Função para esconder o botão de "Aceitar e mostrar mapa.".
+function hideBTN() {
     var z = document.getElementById("texto");
     var x = document.getElementById("texto2");
     if (z.style.display === "none") {
