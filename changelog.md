@@ -32,3 +32,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Updated changelog.
+
+## [0.0.3] 2024 - 09 - 27
+
+- Added a link into README to share the documentation of this work.
+- Into README added a PT-BR and English "How to Install GitHub".
+
