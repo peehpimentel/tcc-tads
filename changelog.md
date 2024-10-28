@@ -37,8 +37,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added a link into README to share the documentation of this work.
 - Into README added a PT-BR and English "How to Install GitHub".
-- 
+  
 ## [0.0.4] 2024 - 10 - 28
 
 - Removed folders and files related to the older version of our project.
 - Added the new files and folders of our project.
+
+### Changed
+
+- Changed the style of the website, instead of using a pre made one.
+- We are now not using Google API key.
+- Created functions to add news and markers to the map.
+- Implemented a function to show markers and news based on the selected date.
