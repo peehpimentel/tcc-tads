@@ -1,0 +1,292 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+}
+
+html {
+    height: 100%; /* Garante que o html ocupe toda a altura da tela */
+}
+
+header {
+    background-color: #202020;
+    padding: 20px;
+    text-align: center;
+    height: 50px; /* Define a altura do cabeçalho */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a img{
+    vertical-align: middle;
+}
+
+nav ul li a:hover {
+    color: #008000;
+}
+
+/* Estilos para o mapa */
+#mapa {
+    position: relative;
+    height: calc(100vh - 50px); /* Preenche o espaço restante da tela após o cabeçalho */
+    width: 100vw; /* O mapa preenche toda a largura */
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+/* Estilos do modal (formulário de adicionar notícia) */
+#form-section {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;  /* Bordas arredondadas */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra suave */
+    z-index: 1000;
+    width: 40%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* Ajuste para os campos do formulário */
+form input[type="text"],
+form input[type="url"],
+form input[type="file"],
+form input[type="number"],
+form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;  /* Bordas arredondadas */
+    font-size: 16px;
+    box-sizing: border-box; /* Garante que o padding seja incluído no tamanho total */
+    transition: border-color 0.3s ease; /* Transição suave ao mudar a cor da borda */
+}
+
+/* Ajuste específico para o textarea */
+form textarea {
+    resize: vertical;  /* Permite o redimensionamento vertical */
+    height: 100px;
+}
+
+
+#mapa.blur-background {
+    filter: blur(5px);
+    transition: filter 0.3s ease-in-out;
+}
+
+/* Botão de envio do formulário */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #008000;  /* Verde para combinar com o tema */
+    color: #fff;
+    border: none;
+    border-radius: 5px;  /* Bordas arredondadas */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #006400;  /* Verde mais escuro ao passar o mouse */
+}
+
+/* Ajuste para o título do formulário */
+#form-section h2 {
+    text-align: center;
+    color: #202020;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* Remove as setas no Chrome, Safari, Edge */
+    margin: 0; /* Remove margens extras */
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Remove as setas no Firefox */
+}
+
+
+/* Botão de fechar o formulário */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-button:hover {
+    color: #ff0000;
+}
+
+/* Ajuste para textos e títulos */
+h2 {
+    text-align: center;
+    color: #202020;
+}
+
+  
+/* Posicionar o dropdown no canto superior direito 
+.dropdown {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: inline-block;
+}*/
+
+/* Estilo para o botão "hamburger" */
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger-icon div {
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Estilizar o botão do dropdown (remover bordas e plano de fundo) */
+.dropbtn {
+    background-color: #202020; /* Cor de fundo combinando com o cabeçalho */
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Ajuste de hover no botão */
+.dropbtn:hover {
+    background-color: #006400;
+}
+
+/* Dropdown escondido */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 10px;
+}
+
+.dropdown-content h3 {
+    margin-top: 0;
+}
+
+.meses h4 {
+    margin-bottom: 5px;
+}
+
+.dias {
+    list-style: none;
+    padding: 0;
+}
+
+.dias li {
+    padding: 5px 0;
+}
+
+/* Mostrar o dropdown quando o botão for clicado */
+.show-dropdown {
+    display: block;
+}
+
+/* Estilizar a lista de notícias */
+#lista-noticias {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+#lista-noticias li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+#lista-noticias li:last-child {
+    border-bottom: none;
+}
+
+/* Estilizar o campo de data e o botão de filtro */
+#filter-news-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#filter-news-form input[type="date"],
+#filter-news-form button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#filter-news-form button {
+    background-color: #008000;
+    color: white;
+    cursor: pointer;
+}
+
+#filter-news-form button:hover {
+    background-color: #006400;
+}
+
+header nav ul li select {
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+/* Mostra o dropdown quando o ícone é clicado */
+#calendar-icon:hover + .dropdown-content,
+#calendar-icon:focus + .dropdown-content {
+    display: block;
+    position: absolute;
+}
