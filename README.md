@@ -1,6 +1,6 @@
 # tcc_tads
 
-- https://docs.google.com/document/d/1eQCwuA5Jpkk0kRdsGTK8FFxlApZFXcadl_LqsF-2H5Q/edit?usp=sharing
+- [https://docs.google.com/document/d/1eQCwuA5Jpkk0kRdsGTK8FFxlApZFXcadl_LqsF-2H5Q/edit?usp=sharing](https://docs.google.com/document/d/1DYnlFzmnonNVt1q_zbKVKrh6Wtcu1RlepiPM2Jh_ENo/edit?usp=sharing)
 
 # How to Clone a GitHub Repository (in English)
 
