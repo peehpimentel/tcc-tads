@@ -14,19 +14,21 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="{% static 'imgs/logo.png' %}" alt="Logo GeoFeed" class="site-logo">
+                <span class="site-title">GeoFeed</span>
+            </div>
+            <ul class="nav-links">
                 <li><a href="#mapa">Mapa</a></li>
                 <li><a href="#" id="toggle-news">Adicionar Notícia</a></li>
                 <li><a href="{% url 'contato' %}">Contato</a></li>
-                <li>
-                    <button id="toggle-drawer" class="hamburger-icon">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </button>
-                </li>
             </ul>
+            <button id="toggle-drawer" class="hamburger-icon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
         </nav>
     </header>     
 
