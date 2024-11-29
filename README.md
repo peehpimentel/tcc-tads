@@ -182,18 +182,18 @@ Done! You’ve successfully installed Python, Django, and Pillow, and can now us
 ## **8. Examples of Usage**
 
 ### **Adding News with Duration**
-- Add a news item for `12/01/2024` with a duration of `7 days`.
-- The marker will be displayed from `12/01/2024` to `12/07/2024`.
+- Add a news item for `01/12/2024` with a duration of `7 days`.
+- The marker will be displayed from `01/12/2024` to `07/12/2024`.
 
 ### **Filtering for a Date Within the Interval**
-- Filter the map for `12/04/2024`.
+- Filter the map for `04/12/2024`.
 - Click on the news in the drawer.
 - The map will stay on the filtered date and focus on the corresponding marker.
 
 ### **Filtering for a Date Outside the Interval**
-- Filter the map for `12/10/2024`.
+- Filter the map for `10/12/2024`.
 - Click on the news in the drawer.
-- The filter will be updated to the news start date (`12/01/2024`).
+- The filter will be updated to the news start date (`01/12/2024`).
 
 ## **9. System Requirements**
 - Recommended browser: **Google Chrome, Firefox, or Edge**.
