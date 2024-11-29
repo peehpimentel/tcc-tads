@@ -45,14 +45,18 @@ Done! Your repository will be cloned to your local machine. You can now navigate
 - During installation, ensure you check the box "Add Python to PATH".
 - Verify the installation with: python --version
 
-### Verify is Pip is installed:
+### Verify if Pip is installed:
 
 - Pip usually comes pre-installed with Python. Verify with: pip --version
 - If not installed, follow the pip installation guide.
 
-### Activate the virtual environment:
+### Create and activate the virtual environment:
 
-- Virtual environments allow you to isolate Python projects, activate with: 
+- Virtual environments allow you to isolate Python projects, create with:
+  ```bash
+  - python -m venv DesiredVirtualEnvironmentName
+  ```
+- Activate with: 
   - **Windows**:
     ```bash
     .\venv\Scripts\activate
@@ -82,7 +86,11 @@ Done! You’ve successfully installed Python, Django, and Pillow, and can now us
 
 ## Second Method: Install All Dependencies at once from requirements.txt
 
-### Ensure you’re in your virtual environment:
+### Create the virtual environment:
+
+- python -m venv DesiredVirtualEnvironmentName
+
+### Ensure you’re in your virtual environment created before:
 
 - **Windows**: .\venv\Scripts\activate
 - **macOS/Linux**: source venv/bin/activate
