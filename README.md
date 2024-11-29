@@ -192,7 +192,7 @@ Done! You’ve successfully installed Python, Django, and Pillow, and can now us
 
 ### **Filtering for a Date Outside the Interval**
 - Filter the map for `10/12/2024`.
-- Click on the news in the drawer.
+- Click on the news that you added in the drawer.
 - The filter will be updated to the news start date (`01/12/2024`).
 
 ## **9. System Requirements**
