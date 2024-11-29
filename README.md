@@ -117,10 +117,8 @@ Done! You’ve successfully installed Python, Django, and Pillow, and can now us
 - **Interacting with markers**:
   - Click on a marker to open a popup with details about the news.
   - The popup displays:
-    ```bash
     - **News Title**.
     - **Summary**.
-    ```
 
 ## **3. Adding News**
 
