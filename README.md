@@ -109,7 +109,7 @@ Done! You’ve successfully installed Python, Django, and Pillow, and can now us
   - A button to add new news items to the map.
   - A button to access the contact page.
 
-![Opening the Program](path/to/your/image_or_gif.gif)
+![Opening the Program](./readme-images/mapa-inicial.png)
 
 ## **2. Exploring the Map**
 
@@ -126,18 +126,18 @@ Done! You’ve successfully installed Python, Django, and Pillow, and can now us
 
 - Click on the **"Add News"** button in the navigation bar.
 - The form will appear with the following fields:
-  - **Title**: The name of the news or event.
-  - **Summary**: A brief description of the news.
+  - **Title**: (Requeried) The name of the news or event.
+  - **Summary**: (Requeried) A brief description of the news.
   - **Image**: (Optional) Upload a relevant image for the news.
-  - **Link**: Add an external link for more information.
-  - **Date**: The start date when the news becomes relevant.
-  - **Duration**: The number of days the news should be displayed on the map.
-  - **Latitude and Longitude**: The coordinates of the event.
-  - **Icon**: Choose an icon to represent the news on the map.
+  - **Link**: (Requeried) Add an external link for more information.
+  - **Date**: (Requeried) The start date when the news becomes relevant.
+  - **Duration**: (Requeried) The number of days the news should be displayed on the map.
+  - **Latitude and Longitude**: (Requeried) The coordinates of the event.
+  - **Icon**: (Requeried) Choose an icon to represent the news on the map.
 - Click **"Add"** to save the news.
 - The map will automatically update, showing the new marker at the selected position.
 
-![Adding News](path/to/your/image_or_gif.gif)
+![Adding News](./readme-images/adicionar-noticia.png)
 
 ## **4. Navigating the Drawer (Sidebar Menu)**
 
@@ -153,7 +153,7 @@ Done! You’ve successfully installed Python, Django, and Pillow, and can now us
       - **Relative Time** (e.g., "Added 2 minutes ago").
   - **Refresh Button**: Reloads the list of news in the drawer.
 
-![Navigating the Drawer](path/to/your/image_or_gif.gif)
+![Navigating the Drawer](./readme-images/drawer.png)
 
 ## **5. Clicking on News in the Drawer**
 
@@ -169,7 +169,7 @@ Done! You’ve successfully installed Python, Django, and Pillow, and can now us
   - Only the markers for the news visible on that day will be displayed.
   - You can click **"Refresh"** to reload the news.
 
-![Filtering News by Date](path/to/your/image_or_gif.gif)
+![Filtering News by Date](./readme-images/filter-drawer.png)
 
 ## **7. Customizing the Map**
 
