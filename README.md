@@ -77,10 +77,10 @@ Done! Your repository will be cloned to your local machine. You can now navigate
 
 ### **Run Django Server**
 
-- First you need to make migrations of all changes with: python -m manage.py makemigrations
-- Apply those migrations: python -m manage.py migrate
-- Run server: python -m manage.py runserver
-- Open your browser and navigate to http://localhost:8000/ or http://127.0.0.1:8000/
+- First you need to make migrations of all changes with: python manage.py makemigrations
+- Apply those migrations: python manage.py migrate
+- Run server: python manage.py runserver
+- Open your browser and navigate to [http://localhost:8000/](http://localhost:8000/) or [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 Done! You’ve successfully installed Python, Django, and Pillow, and can now use our application.
 
@@ -98,6 +98,10 @@ Done! You’ve successfully installed Python, Django, and Pillow, and can now us
 ### **Install all dependencies:**
 
 - Run this command to install all dependencies: pip install -r requirements.txt
+- After installed all dependencies make django migrations with python manage.py makemigrations
+- Migrate all the changes with python manage.py migrate
+- Run django server with python manage.py runserver
+- Open your browser and navigate to [http://localhost:8000/](http://localhost:8000/) or [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 # **STEP-BY-STEP GUIDE TO USE THE MAP**
 
@@ -117,10 +121,8 @@ Done! You’ve successfully installed Python, Django, and Pillow, and can now us
 - **Interacting with markers**:
   - Click on a marker to open a popup with details about the news.
   - The popup displays:
-    ```bash
     - **News Title**.
     - **Summary**.
-    ```
 
 ## **3. Adding News**
 
@@ -184,24 +186,102 @@ Done! You’ve successfully installed Python, Django, and Pillow, and can now us
 ## **8. Examples of Usage**
 
 ### **Adding News with Duration**
-- Add a news item for `12/01/2024` with a duration of `7 days`.
-- The marker will be displayed from `12/01/2024` to `12/07/2024`.
+- Add a news item for `01/12/2024` with a duration of `7 days`.
+- The marker will be displayed from `01/12/2024` to `07/12/2024`.
 
 ### **Filtering for a Date Within the Interval**
-- Filter the map for `12/04/2024`.
+- Filter the map for `04/12/2024`.
 - Click on the news in the drawer.
 - The map will stay on the filtered date and focus on the corresponding marker.
 
 ### **Filtering for a Date Outside the Interval**
-- Filter the map for `12/10/2024`.
-- Click on the news in the drawer.
-- The filter will be updated to the news start date (`12/01/2024`).
+- Filter the map for `10/12/2024`.
+- Click on the news that you added in the drawer.
+- The filter will be updated to the news start date (`01/12/2024`).
 
 ## **9. System Requirements**
 - Recommended browser: **Google Chrome, Firefox, or Edge**.
 - Internet connection required to load the maps.
 
+# Possible issues:
 
+If you receive an error like:
+
+```
+Fatal error in launcher: Unable to create process using '"<PATH>\venv\Scripts\python.exe"  "<PATH>\venv\Scripts\pip.exe" freeze': The system cannot find the file specified.
+```
+
+Follow these steps to resolve the issue:
+
+## Step 1: Edit `activate` and `activate.bat` Files
+
+- Navigate to your virtual environment folder:
+   ```
+   <YOUR_PROJECT_PATH>\venv\Scripts
+   ```
+![Scripts Path](./readme-images/activate-img.png)
+
+- Open the `activate` and `activate.bat` files with a text editor.
+- Look for any references to the old virtual environment path (`<OLD_PATH>\venv`) and update them to the new path:
+   ```
+   <NEW_PATH>\venv
+   ```
+   -- Activate file:
+  
+![Scripts Path](./readme-images/activate-file-img.png)
+
+   -- Activate.bat file:
+   
+![Scripts Path](./readme-images/activate-bat-file-img.png)
+   
+- Save the changes.
+
+## Step 2: Restart Your Editor
+
+- Close and reopen your code editor (e.g., VSCode) to ensure the changes are applied properly.
+
+## Step 3: Upgrade `pip`
+
+- Reactivate your virtual environment:
+   ```
+   .\venv\Scripts\activate
+   ```
+- Upgrade `pip` to ensure it's working correctly:
+   ```
+   pip install --upgrade pip
+   ```
+   
+## Step 4: Retry Your Command
+
+- Try running the command again:
+  ```
+  pip freeze > requirements.txt
+  ```
+
+## Step 5: Recreate the Virtual Environment (If Needed)
+
+If the issue persists, create a new virtual environment:
+
+- Create a new virtual environment:
+   ```
+   python -m venv venv
+   ```
+- Activate the new virtual environment:
+   ```
+   <NEW_PATH>\venv\Scripts\activate
+   ```
+- Reinstall your dependencies using `requirements.txt`:
+   ```
+   pip install -r requirements.txt
+   ```
+
+## Note:
+
+Replace `<OLD_PATH>` with the previous incorrect path and `<NEW_PATH>` with the current correct path for your virtual environment.
+
+-- If you need help finding the path to the file or folder, just right click on the name and then copy or just right click and press SHIFT + ALT + C
+
+  ![Scripts Path](./readme-images/rightclick.png)
 
 
 
