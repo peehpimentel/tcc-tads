@@ -203,7 +203,85 @@ Done! You’ve successfully installed Python, Django, and Pillow, and can now us
 - Recommended browser: **Google Chrome, Firefox, or Edge**.
 - Internet connection required to load the maps.
 
+# Possible issues:
 
+If you receive an error like:
+
+```
+Fatal error in launcher: Unable to create process using '"<PATH>\venv\Scripts\python.exe"  "<PATH>\venv\Scripts\pip.exe" freeze': The system cannot find the file specified.
+```
+
+Follow these steps to resolve the issue:
+
+## Step 1: Edit `activate` and `activate.bat` Files
+
+- Navigate to your virtual environment folder:
+   ```
+   <YOUR_PROJECT_PATH>\venv\Scripts
+   ```
+![Scripts Path](./readme-images/activate-img.png)
+
+- Open the `activate` and `activate.bat` files with a text editor.
+- Look for any references to the old virtual environment path (`<OLD_PATH>\venv`) and update them to the new path:
+   ```
+   <NEW_PATH>\venv
+   ```
+   -- Activate file:
+  
+![Scripts Path](./readme-images/activate-file-img.png)
+
+   -- Activate.bat file:
+   
+![Scripts Path](./readme-images/activate-bat-file-img.png)
+   
+- Save the changes.
+
+## Step 2: Restart Your Editor
+
+- Close and reopen your code editor (e.g., VSCode) to ensure the changes are applied properly.
+
+## Step 3: Upgrade `pip`
+
+- Reactivate your virtual environment:
+   ```
+   .\venv\Scripts\activate
+   ```
+- Upgrade `pip` to ensure it's working correctly:
+   ```
+   pip install --upgrade pip
+   ```
+   
+## Step 4: Retry Your Command
+
+- Try running the command again:
+  ```
+  pip freeze > requirements.txt
+  ```
+
+## Step 5: Recreate the Virtual Environment (If Needed)
+
+If the issue persists, create a new virtual environment:
+
+- Create a new virtual environment:
+   ```
+   python -m venv venv
+   ```
+- Activate the new virtual environment:
+   ```
+   <NEW_PATH>\venv\Scripts\activate
+   ```
+- Reinstall your dependencies using `requirements.txt`:
+   ```
+   pip install -r requirements.txt
+   ```
+
+## Note:
+
+Replace `<OLD_PATH>` with the previous incorrect path and `<NEW_PATH>` with the current correct path for your virtual environment.
+
+-- If you need help finding the path to the file or folder, just right click on the name and then copy or just right click and press SHIFT + ALT + C
+
+  ![Scripts Path](./readme-images/rightclick.png)
 
 
 
