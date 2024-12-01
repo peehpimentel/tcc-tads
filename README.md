@@ -77,10 +77,10 @@ Done! Your repository will be cloned to your local machine. You can now navigate
 
 ### **Run Django Server**
 
-- First you need to make migrations of all changes with: python -m manage.py makemigrations
-- Apply those migrations: python -m manage.py migrate
-- Run server: python -m manage.py runserver
-- Open your browser and navigate to http://localhost:8000/ or http://127.0.0.1:8000/
+- First you need to make migrations of all changes with: python manage.py makemigrations
+- Apply those migrations: python manage.py migrate
+- Run server: python manage.py runserver
+- Open your browser and navigate to [http://localhost:8000/](http://localhost:8000/) or [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 Done! You’ve successfully installed Python, Django, and Pillow, and can now use our application.
 
@@ -98,6 +98,10 @@ Done! You’ve successfully installed Python, Django, and Pillow, and can now us
 ### **Install all dependencies:**
 
 - Run this command to install all dependencies: pip install -r requirements.txt
+- After installed all dependencies make django migrations with python manage.py makemigrations
+- Migrate all the changes with python manage.py migrate
+- Run django server with python manage.py runserver
+- Open your browser and navigate to [http://localhost:8000/](http://localhost:8000/) or [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 # **STEP-BY-STEP GUIDE TO USE THE MAP**
 
