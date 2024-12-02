@@ -2,10 +2,11 @@
 
 - Here's the link for the PDF file of the article.
 
-<a href="https://drive.google.com/file/d/1tlXNxpa4S3-iGcgFOuw6RQy_Ta01G-RI/view?usp=sharing">
-  <img src="https://img.shields.io/badge/Open-PDF-red" alt="Open PDF" target="_blank">
-</a>
+[![Open PDF](https://img.shields.io/badge/Open-PDF-green)](https://drive.google.com/file/d/1tlXNxpa4S3-iGcgFOuw6RQy_Ta01G-RI/view?usp=sharing)
 
+**Note: To open the PDF in a new tab, right-click on the link and select 'Open in new tab,' or simply press Ctrl + Left Click (or Cmd + Left Click on Mac).**
+
+---
 
 # **How to Clone a GitHub Repository**
 
