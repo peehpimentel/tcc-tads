@@ -41,6 +41,8 @@
 
 Done! Your repository will be cloned to your local machine. You can now navigate to the repository folder with cd <repository-folder>.
 
+---
+
 # How to install all dependencies for the application
 
 ## **First Method: Install Dependencies Individually** 
@@ -89,6 +91,8 @@ Done! Your repository will be cloned to your local machine. You can now navigate
 - Open your browser and navigate to [http://localhost:8000/](http://localhost:8000/) or [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 Done! You’ve successfully installed Python, Django, and Pillow, and can now use our application.
+
+--
 
 ## **Second Method: Install All Dependencies at once from requirements.txt**
 
@@ -208,6 +212,8 @@ Done! You’ve successfully installed Python, Django, and Pillow, and can now us
 ## **9. System Requirements**
 - Recommended browser: **Google Chrome, Firefox, or Edge**.
 - Internet connection required to load the maps.
+
+---
 
 # Possible issues:
 
