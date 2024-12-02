@@ -2,7 +2,10 @@
 
 - Here's the link for the PDF file of the article.
 
-[![Open PDF](https://img.shields.io/badge/Visualizar-PDF-blue)](https://drive.google.com/file/d/1tlXNxpa4S3-iGcgFOuw6RQy_Ta01G-RI/view?usp=sharing)
+<a href="https://drive.google.com/file/d/1tlXNxpa4S3-iGcgFOuw6RQy_Ta01G-RI/view?usp=sharing" target="_blank">
+  <img src="https://img.shields.io/badge/Open-PDF-red" alt="Open PDF">
+</a>
+
 
 # **How to Clone a GitHub Repository**
 
