@@ -113,6 +113,8 @@ Done! You’ve successfully installed Python, Django, and Pillow, and can now us
 - Run django server with python manage.py runserver
 - Open your browser and navigate to [http://localhost:8000/](http://localhost:8000/) or [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
+---
+
 # **STEP-BY-STEP GUIDE TO USE THE MAP**
 
 ## **1. Opening the Program**
