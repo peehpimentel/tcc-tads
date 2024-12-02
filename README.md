@@ -2,8 +2,8 @@
 
 - Here's the link for the PDF file of the article.
 
-<a href="https://drive.google.com/file/d/1tlXNxpa4S3-iGcgFOuw6RQy_Ta01G-RI/view?usp=sharing" target="_blank">
-  <img src="https://img.shields.io/badge/Open-PDF-red" alt="Open PDF">
+<a href="https://drive.google.com/file/d/1tlXNxpa4S3-iGcgFOuw6RQy_Ta01G-RI/view?usp=sharing">
+  <img src="https://img.shields.io/badge/Open-PDF-red" alt="Open PDF" target="_blank">
 </a>
 
 
