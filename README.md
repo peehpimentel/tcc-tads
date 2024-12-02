@@ -1,6 +1,8 @@
 # **APPLICATION FOR NEWS OPTIMIZATION AND HIGHLIGHTING CURRENT ENTERTAINMENT.**
 
-- [https://docs.google.com/document/d/1eQCwuA5Jpkk0kRdsGTK8FFxlApZFXcadl_LqsF-2H5Q/edit?usp=sharing](https://docs.google.com/document/d/1DYnlFzmnonNVt1q_zbKVKrh6Wtcu1RlepiPM2Jh_ENo/edit?usp=sharing)
+- Here's the link for the PDF file of the article.
+
+[![Open PDF](https://img.shields.io/badge/Visualizar-PDF-blue)](https://drive.google.com/file/d/1tlXNxpa4S3-iGcgFOuw6RQy_Ta01G-RI/view?usp=sharing)
 
 # **How to Clone a GitHub Repository**
 
