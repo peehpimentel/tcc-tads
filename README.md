@@ -2,7 +2,7 @@
 
 - Here's the link for the PDF file of the article.
 
-[![Open PDF](https://img.shields.io/badge/Open-PDF-green)](https://drive.google.com/file/d/1tlXNxpa4S3-iGcgFOuw6RQy_Ta01G-RI/view?usp=sharing)
+[![Open PDF](https://img.shields.io/badge/Open-PDF-green)](https://drive.google.com/file/d/1_kxtxT6LzmMgdBQCgELQBaVSn-sd3XVZ/view?usp=sharing)
 
 **Note: To open the PDF in a new tab, right-click on the link and select 'Open in new tab,' or simply press Ctrl + Left Click (or Cmd + Left Click on Mac).**
 
