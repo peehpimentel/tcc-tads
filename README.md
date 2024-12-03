@@ -291,7 +291,7 @@ If the issue persists, create a new virtual environment:
 
 # Fixing Virtual Environment issues
 
-If you encounter an error such as ![Path error](./readme-images/path-error.png) after activating the virtual environment and trying to run the server, follow these steps to fix it:
+If you encounter an error such as ![Path error](./readme-images/error-path.png) after activating the virtual environment and trying to run the server, follow these steps to fix it:
 
 1. **Locate Python installations:**
    - On **Windows**, open CMD as Administrator and type:
@@ -303,6 +303,7 @@ If you encounter an error such as ![Path error](./readme-images/path-error.png) 
      which python3
      ```
      This will display all Python installations on your computer.  
+     
      ![Where Python](./readme-images/where-python.png)
 
 2. **Choose the correct Python version:**
@@ -319,6 +320,7 @@ If you encounter an error such as ![Path error](./readme-images/path-error.png) 
 
 3. **Edit `pyvenv.cfg`:**
    - Open your virtual environment folder in your IDE and locate the `pyvenv.cfg` file.
+     
      ![Open pyvenv.cfg](./readme-images/pyvenvcfg.png)
 
 4. **Update `pyvenv.cfg` file:**
@@ -327,12 +329,14 @@ If you encounter an error such as ![Path error](./readme-images/path-error.png) 
      - `home`
      - `executable`
      - `command`  
+  
      ![Edit pyvenv.cfg](./readme-images/change-paths.png)
 
 5. **Adjust the `command` paths:**
    - For the `command` line:
      - Replace the **first path** (highlighted in blue) with the Python path you obtained from the `where python` command.
      - Replace the **second path** with your virtual environment folder path (the same folder where you opened the `pyvenv.cfg` file).  
+     
      ![Command Paths](./readme-images/command-path.png)
 
 6. **Save and try again:**
@@ -345,7 +349,7 @@ If you encounter an error such as ![Path error](./readme-images/path-error.png) 
 
 Replace `<OLD_PATH>` with the previous incorrect path and `<NEW_PATH>` with the current correct path for your virtual environment.
 
--- If you need help finding the path to the file or folder, just right click on the name and then copy or just right click and press SHIFT + ALT + C
+- If you need help finding the path to the file or folder, just right click on the name and then copy or just right click and press SHIFT + ALT + C
 
   ![Scripts Path](./readme-images/rightclick.png)
 
