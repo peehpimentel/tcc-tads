@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     map.on('popupopen', (e) => {
                         const marker = e.popup._source;
                         const nearbyMarkers = [];
-                        markersLayer.eachLayer((layer) => {
+                        markersCluster.eachLayer((layer) => {
                             if (layer !== marker) {
                                 const distance = map.distance(marker.getLatLng(), layer.getLatLng());
                                 if (distance < 20) {
