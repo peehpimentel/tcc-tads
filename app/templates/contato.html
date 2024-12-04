@@ -11,6 +11,7 @@
     <header>
         <nav>
             <ul>
+                <!-- Urls vindo de urls.py -->
                 <li><a href="/">Mapa</a></li>
                 <li><a href="/contato">Contato</a></li>
             </ul>
@@ -18,7 +19,7 @@
     </header>
 
     <main class="main-container">
-        <!-- Área Verde com Proposta -->
+        <!-- Área verde com a proposta -->
         <section class="proposta-section">
             <div class="text-content">
                 <h1>Proposta única da empresa</h1>
@@ -28,7 +29,7 @@
             </div>
         </section>
 
-        <!-- Logo no Círculo Preto -->
+        <!-- Logo no círculo -->
         <section class="logo-section">
             <div class="curved-black-section">
                 <a href="/"><img src="{% static 'imgs/logo.png' %}" alt="Logo GeoFeed" class="logo-image"></a>
@@ -60,15 +61,16 @@
             </div>
         </footer>
     </main>
+    <!-- Plugin vlibras -->
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
-          <div class="vw-plugin-top-wrapper"></div>
+        <div class="vw-plugin-top-wrapper"></div>
         </div>
-      </div>
-      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-      <script>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
-      </script>
+    </script>
 </body>
 </html>

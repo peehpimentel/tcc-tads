@@ -19,7 +19,7 @@ def adicionar_noticia(request):
         if form.is_valid():
             noticia = form.save(commit=False)
 
-            # Ajusta a data fornecida para incluir timezone, se necessário
+            # Ajusta a data fornecida para incluir fuso horário, ou seja, transforma para o padrão MS 
             if noticia.data and not noticia.data.tzinfo:
                 noticia.data = make_aware(noticia.data)
 
@@ -47,9 +47,9 @@ def get_markers(request):
             data_selecionada = datetime(year=now().year, month=int(mes), day=int(dia)).date()
         else:
             data_selecionada = now().date()
-
+        # Lista que guarda as notícias visíveis na data selecionada
         noticias_visiveis = []
-        noticias = Noticia.objects.all()
+        noticias = Noticia.objects.all() # recupera as notícias do banco de dados
         for noticia in noticias:
             if noticia.esta_visivel_em(data_selecionada):
                 noticias_visiveis.append({
@@ -58,7 +58,7 @@ def get_markers(request):
                     'titulo': noticia.titulo,
                     'resumo': noticia.resumo,
                     'icone': noticia.icone,
-                    'data_adicionado': localtime(noticia.data_adicionado).isoformat(),
+                    'data_adicionado': localtime(noticia.data_adicionado).isoformat(), # 
                     'duracao': noticia.duracao,
                 })
 
