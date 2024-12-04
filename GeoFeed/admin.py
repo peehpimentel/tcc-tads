@@ -5,11 +5,11 @@ from .models import Noticia
 class NoticiaAdmin(admin.ModelAdmin):
     # Campos a serem exibidos na lista do Django Admin
     list_display = ('titulo', 'data', 'data_adicionado', 'latitude', 'longitude')
-    # Campos pelos quais será possível buscar
+    # Campos para busca
     search_fields = ('titulo', 'resumo', 'link')
-    # Filtros na barra lateral
+    # Filtros
     list_filter = ('data', 'data_adicionado', 'icone')
-    # Campos que podem ser editados diretamente na lista
+    # Campos que podem ser editados
     list_editable = ('data_adicionado',)
     # Ordenação padrão
     ordering = ('-data',)

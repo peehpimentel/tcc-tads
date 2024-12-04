@@ -41,11 +41,13 @@
         <section id="form-section">
             <h2>Adicionar Notícia</h2>
             <button id="close-form" class="close-button">&times;</button>
+            <!-- Transforma o formulário em POST e permite o envio de imagens -->
+            <!-- {{ form.campo }} Renderiza o campo definido no formulário do Django. -->
             <form method="POST" enctype="multipart/form-data">
-                {% csrf_token %}
+                {% csrf_token %} <!-- Proteção contra ataques CSRF, token para impedir requisições em nome do usuário autenticado (ADM) -->
                 
                 <label for="id_titulo">Título: <span style="color: red;">*</span></label>
-                {{ form.titulo }}
+                {{ form.titulo }} 
                 
                 <label for="id_resumo">Resumo: <span style="color: red;">*</span></label>
                 {{ form.resumo }}
@@ -65,7 +67,7 @@
                     <!-- Campo Duração -->
                     <div class="field">
                         <label for="id_duracao">Duração (em dias): <span style="color: red;">*</span></label>
-                        <input type="number" name="duracao" id="id_duracao" min="1" placeholder="Digite a duração ou deixe em branco para indeterminado">
+                        <input type="number" name="duracao" id="id_duracao" min="1" placeholder="Digite a duração">
                     </div>
                 </div>
             
@@ -121,20 +123,20 @@
                 <span id="loading-spinner" class="spinner" style="display: none;"></span>
             </div>
             <ul id="news-history">
-                <!-- Notícias carregadas dinamicamente aqui -->
+                <!-- Notícias serão carregadas dinamicamente aqui -->
             </ul>
         </div>
     </main>
-
+    <!-- Plugin vlibras -->
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
-          <div class="vw-plugin-top-wrapper"></div>
+        <div class="vw-plugin-top-wrapper"></div>
         </div>
-      </div>
-      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-      <script>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
-      </script>
+    </script>
 </body>
 </html>
