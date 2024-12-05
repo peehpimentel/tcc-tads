@@ -67,11 +67,11 @@ Done! Your repository will be cloned to your local machine. You can now navigate
 - Activate with: 
   - **Windows**:
     ```bash
-    .\venv\Scripts\activate
+    .\DesiredVirtualEnvironmentName\Scripts\activate
     ```
   - **macOS/Linux**:
     ```bash
-    source venv/bin/activate
+    source DesiredVirtualEnvironmentName/bin/activate
     ```
 ### **Install Django**
 
@@ -102,8 +102,8 @@ Done! You’ve successfully installed Python, Django, and Pillow, and can now us
 
 ### **Ensure you’re in your virtual environment created before:**
 
-- **Windows**: .\venv\Scripts\activate
-- **macOS/Linux**: source venv/bin/activate
+- **Windows**: .\DesiredVirtualEnvironmentName\Scripts\activate
+- **macOS/Linux**: source DesiredVirtualEnvironmentName/bin/activate
 
 ### **Install all dependencies:**
 
@@ -278,11 +278,11 @@ If the issue persists, create a new virtual environment:
 
 - Create a new virtual environment:
    ```
-   python -m venv venv
+   python -m venv NewVenv
    ```
 - Activate the new virtual environment:
    ```
-   <NEW_PATH>\venv\Scripts\activate
+   .\NewVenv\Scripts\activate
    ```
 - Reinstall your dependencies using `requirements.txt`:
    ```
@@ -342,6 +342,54 @@ If you encounter an error such as ![Path error](./readme-images/error-path.png) 
 6. **Save and try again:**
    - Press `CTRL + S` to save the changes.
    - Re-run the server to verify that the issue is resolved.
+
+---
+
+# Resolve script execution error on Windows
+
+If you encounter a script execution error in Windows PowerShell  while trying to activate a virtual environment (like the image below), follow these steps:
+
+![Script Error](./readme-images/script-error.png)
+
+1. Open PowerShell as Administrator
+
+ - Press Win + S and type PowerShell.
+ - Right-click on the PowerShell icon and select Run as Administrator.
+
+2. Change the Execution Policy
+
+## Run the following command to allow execution of scripts created locally while blocking unsigned remote scripts:
+  ```
+  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+  ```
+ - When prompted, type A (Yes to All) to confirm.
+
+3. Activate the Virtual Environment
+
+ - Close the Administrator PowerShell.
+ - Open a normal PowerShell window in your project directory.
+ - Run the command to activate the virtual environment:
+ ```
+    .\venv\Scripts\activate
+  ```
+4. Optional: Revert Execution Policy After Use
+
+To enhance security, you may revert the execution policy to its default setting:
+  ```
+  Set-ExecutionPolicy -ExecutionPolicy Restricted
+  ```
+# **Important Warning**
+
+## **If the above steps don't work, you can temporarily use a less restrictive execution policy. However, this approach allows any script to run, which can pose a security risk. Use it only if absolutely necessary:**
+
+ - Open PowerShell as Administrator.
+ - Run the command:
+  ```
+  Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+  ```
+ - When prompted, type A (Yes to All) to confirm.
+  
+- **After completing your tasks, immediately revert to a more secure policy (e.g., RemoteSigned or Restricted).**
 
 ---
 
