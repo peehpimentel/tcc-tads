@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Inicializa o mapa
-    var map = L.map('mapa').setView([-20.789, -51.700], 15); // Três Lagoas-MS
+    var map = L.map('mapa').setView([-20.789, -51.700], 15); 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(map);
 
-    // Camada para gerenciar marcadores
-    var markersCluster = L.markerClusterGroup(); // Cria o grupo de clusters
+    // Cria um grupo de clusters
+    var markersCluster = L.markerClusterGroup(); 
 
-    // Adicione o cluster ao mapa
+    // Adicione o grupo de clusters ao mapa
     map.addLayer(markersCluster);
 
     // Armazena os marcadores adicionados no mapa
@@ -41,29 +41,22 @@ document.addEventListener('DOMContentLoaded', function () {
             popupAnchor: [-3, -76],
         }),
     };
-
-    // Adicionar marcador ao mapa
     function adicionarMarcador(latitude, longitude, titulo, resumo, iconName) {
         var icon = icone[iconName] || icone.locationIcon;
     
-        // Crie o marcador
         var marker = L.marker([latitude, longitude], { icon: icon });
         marker.bindPopup(`<strong>${titulo}</strong><br>${resumo}`);
     
-        // Adicione o marcador ao cluster
         markersCluster.addLayer(marker);
     
         // Salve o marcador no Map para referências futuras
         markerMap.set(titulo, marker);
     }
-
-    // Limpar todos os marcadores
     function limparMarcadores() {
-        markersCluster.clearLayers(); // Limpa os clusters
-        markerMap.clear(); // Limpa o mapa de marcadores rastreados
+        markersCluster.clearLayers(); 
+        markerMap.clear(); 
     }
-
-    // Carregar marcadores filtrados
+    // Carrega o mapa quando clicamos no datepicker que está no drawer
     function carregarMarcadoresFiltrados(mes, dia) {
         return new Promise((resolve, reject) => {
             fetch(`/get_markers/?mes=${mes}&dia=${dia}`)
@@ -81,15 +74,15 @@ document.addEventListener('DOMContentLoaded', function () {
                             );
                         }
                     });
-                    resolve(); // Marcadores carregados
+                    resolve(); // Carrega os marcadores depois de verificar se o IF é true
                 })
                 .catch((error) => {
                     console.error('Erro ao carregar marcadores filtrados:', error);
-                    reject(error); // Rejeita em caso de erro
+                    reject(error);
                 });
         });
     }
-    // Configurar data atual no filtro
+    // Configuração para a data atual no filtro do drawer
     const datepicker = document.getElementById('datepicker');
     function configurarDataAtual() {
         const hoje = new Date();
@@ -102,10 +95,8 @@ document.addEventListener('DOMContentLoaded', function () {
             carregarMarcadoresFiltrados(mes, dia);
         }
     }
-
     configurarDataAtual();
-
-    // Alternar visibilidade do formulário
+    // Até a linha 114, aqui deixará o mapa com blur ou sem blur quando clicar no formulário
     const toggleNewsButton = document.getElementById('toggle-news');
     const formSection = document.getElementById('form-section');
     if (toggleNewsButton && formSection) {
@@ -130,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
             e.preventDefault();
             const formData = new FormData(form);
 
-            // Certifica-se de que a data e hora estão sendo enviadas corretamente
+            // Certificar de que a data e horas estão sendo enviadas de maneira válida DD/MM/AAAA HH/MM
             const dataField = form.querySelector('[name="data"]');
             if (!dataField.value) {
                 alert('Por favor, insira uma data e hora válidas.');
@@ -163,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 .catch((error) => console.error('Erro ao enviar notícia:', error));
         });
     }
-
+    // Função para criar o tempo relativo, ou seja, aquele tempo "Adicionado há 10 minutos"
     function getRelativeTime(dateString) {
         const now = new Date();
         const date = new Date(dateString);
@@ -173,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const minutes = Math.floor(diffInSeconds / 60);
         const hours = Math.floor(minutes / 60);
         const days = Math.floor(hours / 24);
-    
+        // Deixa a escrita no padrão pt-br
         const rtf = new Intl.RelativeTimeFormat('pt-br', { numeric: 'auto' });
     
         if (minutes < 60) {
@@ -184,12 +175,10 @@ document.addEventListener('DOMContentLoaded', function () {
             return rtf.format(-days, 'day'); // Tempo em dias
         }
     }
-
     // Carregar últimas notícias no drawer
     const drawer = document.getElementById('drawer');
     const newsHistory = document.getElementById('news-history');
     const refreshButton = document.getElementById('refresh-news');
-
     function carregarUltimasNoticias() {
         newsHistory.innerHTML = '<div class="loading-spinner"></div>'; // Adiciona o spinner de loading
         fetch('/get_noticias_intervalo/')
@@ -198,6 +187,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 newsHistory.innerHTML = ''; // Remove o spinner de loading
                 data.forEach((noticia) => {
                     const listItem = document.createElement('li');
+                    // Está mandando a notícia adicionada para o drawer
                     listItem.innerHTML = `
                     <div class="news-item">
                         <div class="news-header">
@@ -212,6 +202,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
                     </div>
                     `;
+                    // Função para dar zoom no marcador quando clicar na notícia referente ao marcador
                     listItem.addEventListener('click', () => {
                         const [ano, mes, dia] = noticia.data.split('T')[0].split('-');
                         datepicker.value = `${ano}-${mes}-${dia}`;
@@ -264,7 +255,6 @@ document.addEventListener('DOMContentLoaded', function () {
             .catch((error) => console.error('Erro ao carregar últimas notícias:', error));
     }
     
-
     const toggleDrawerButton = document.getElementById('toggle-drawer');
     const closeDrawerButton = document.getElementById('close-drawer');
     if (toggleDrawerButton && drawer) {
@@ -299,9 +289,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-
-    
-
+    // Carrega o mapa para a data da noticia quando clicamos no drawer
     function recarregarMapaComFiltro(mes, dia) {
         const mapaContainer = document.getElementById('mapa');
         mapaContainer.classList.add('loading');

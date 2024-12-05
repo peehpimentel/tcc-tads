@@ -12,6 +12,6 @@ urlpatterns = [
     path('contato/', views.contato, name='contato'),
     path('get_noticias_intervalo/', views.get_noticias_intervalo, name='get_noticias_intervalo'),
 ]
-
+# Permite a adição de media
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
